@@ -1,4 +1,4 @@
-//java 으떻게 하는지 까먹음 :) 조졌다~
+package prog;//java 으떻게 하는지 까먹음 :) 조졌다~
 
 
 public class AAlotto {
