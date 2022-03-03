@@ -1,7 +1,7 @@
 package prog;//java 으떻게 하는지 까먹음 :) 조졌다~
 
 
-public class AAlotto {
+public class SolutionAA {
     public int[] solution(int[] lottos, int[] win_nums) {
         int[] answer = new int[2];
         int zcount = 0;
@@ -24,7 +24,7 @@ public class AAlotto {
 
     public static void main(String[] args) {
 
-        AAlotto a = new AAlotto();
+        SolutionAA a = new SolutionAA();
 
         int[] lottos = {1, 2, 3, 4, 5, 0};
         int[] win_nums = {1, 2, 3, 4, 15, 41};

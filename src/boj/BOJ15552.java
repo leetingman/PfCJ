@@ -17,7 +17,7 @@ public class BOJ15552 {
             int A = Integer.parseInt(st.nextToken());
 
             int B = Integer.parseInt(st.nextToken());
-            sb.append("Case #"+i+": ").append(A + B).append("\n");
+            sb.append("Case #"+i+": "+A+"+"+B+"=").append(A + B).append("\n");
         }
         System.out.println(sb);
 
