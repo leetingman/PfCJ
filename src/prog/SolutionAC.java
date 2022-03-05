@@ -1,3 +1,4 @@
+/*
 package prog;
 
 import java.util.*;
@@ -6,12 +7,14 @@ public class SolutionAC {
     public int[] solution(String[] id_list, String[] report, int k) {
 //        id_list 이용자의 id 를 나타내는 문자열
 //        report 이용자id 신고한id  ex "muzi fredo" "muze" report "frodo"
-         /*
+         */
+/*
          report 중복값제거 =>    report -> Hashset v
          1. report 분리 필요  reporter(value)와  reported(key) ,Map<String, ArrayList<String>>으로 reporter 츄
          2. int[] answer = new int[id_list.length] 초기화
          3. reported의 value값.size가 > k 인 값
-        */
+        *//*
+
         int[] answer = new int[id_list.length];
         HashSet<String> reportSet=new HashSet<>();
 
@@ -63,3 +66,4 @@ public class SolutionAC {
     }
 
 }
+*/
