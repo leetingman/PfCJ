@@ -13,37 +13,37 @@ public class BOJ2775 {
     public static void main(String[] args) throws IOException {
         BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
         int n= Integer.parseInt(br.readLine());
-        int result;
+        int[][] arr= new int[15][15];
+        for(int i=0;i<15;i++){
+            arr[i][0]=1;
+            arr[0][i]=i+1;
+        }
+        //handle function
+        for(int i=1;i<15;i++){
+            for(int j=1;j<15;j++){
+                arr[i][j]=arr[i-1][j]+arr[i][j-1];
+            }
+        }
+
+        for(int i=0;i<15;i++){
+            for(int j=0;j<15;j++){
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println(" ");
+        }
+
+        //print
         for(int i=0;i<n;i++){
-            result=0;
             int a= Integer.parseInt(br.readLine());
             int b= Integer.parseInt(br.readLine());
-            int[][] arr=new int[a][b];
-
-            if(b==1){
-                System.out.println("1");
-            }
-            else{
-                for(int j=0;j<b;j++){
-                    arr[0][j]=j+1;
-                }
-                for(int j=0;j<a;j++){
-                    arr[j][0]=1;
-                }
-
-                for(int j=1;j<a;j++){
-                    for(int k=2;k<b;k++){
-                        arr[j][k]=arr[j][k-1]+arr[j-1][k];
-                    }
-                }
-
-            } System.out.println(arr[a][b]);
-
-
-
-
-
+            System.out.println(arr[a][b-1]);
+            //test case 1 3 :6  v
+            //test case 2 3 :10  v
+            //test case 2 4 :20  v
 
         }
+
+
+
     }
 }
