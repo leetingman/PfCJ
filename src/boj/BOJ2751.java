@@ -7,7 +7,7 @@ public class BOJ2751 {
     public static void main(String[] args) throws IOException {
         BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw =new BufferedWriter(new OutputStreamWriter(System.out));
-
+        StringBuilder sb= new StringBuilder();
         int n= Integer.parseInt(br.readLine());
         int [] arr=new int[n];
         for(int i=0;i<arr.length;i++){
@@ -16,9 +16,8 @@ public class BOJ2751 {
         }
         Arrays.sort(arr);
         for(int i=0;i<arr.length;i++){
-            bw.write(arr[i]);
+            sb.append(arr[i]+"\n");
         }
-
-        bw.close();
+        System.out.println(sb);
     }
 }
