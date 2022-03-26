@@ -9,6 +9,8 @@ public class BOJ2743 {
         BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
         String str=br.readLine();
         System.out.print(str.length());
+        System.out.print(str.length());
+        System.out.print(str.length());
     }
 
 }
