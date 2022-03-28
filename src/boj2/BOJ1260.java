@@ -37,6 +37,10 @@ public class BOJ1260 {
         check= new boolean[n+1];
         dfs(start);
         System.out.println();
+        check= new boolean[n+1];
+        bfs(start);
+        System.out.println();
+
         br.close();
 
     }
@@ -45,7 +49,7 @@ public class BOJ1260 {
             return;
         }
         check[x]=true;
-        System.out.println(x+" ");
+        System.out.print(x+" ");
         for(int y:list[x]){
             if(!check[y]){
                 dfs(y);
@@ -53,6 +57,18 @@ public class BOJ1260 {
         }
     }
     public static void bfs(int start){
-
+        Queue<Integer> queue =new LinkedList<Integer>();
+        queue.add(start);
+        check[start]=true;
+        while(!queue.isEmpty()){
+            int x = queue.poll();
+            System.out.print(x+ " ");
+            for( int y:list[x]){
+                if(!check[y]){
+                    check[y]= true;
+                    queue.add(y);
+                }
+            }
+        }
     }
 }
