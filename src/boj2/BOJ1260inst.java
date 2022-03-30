@@ -28,6 +28,16 @@ public class BOJ1260inst {
             stack.pop();
         }
     }
+    public static void dfs_1(int i){
+        visited[i]=true;
+        System.out.println(i+" ");
+
+        for(int j =1;j<=N;j++){
+            if(map[i][j]==1&&visited[j]==false){
+                dfs_1(j);
+            }
+        }
+    }
     public static void main(String[] args) throws IOException {
         BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
